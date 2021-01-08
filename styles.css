@@ -3,12 +3,33 @@
     --menu-bar-height: 10px;
 }
 
+.container {
+    padding: 20px 0 20px 0;
+    width: var(--menu-bar-width);
+}
+
+.container:hover #menu::before {
+    transform: rotate(45deg);
+    transition: .5s ease-in-out;
+    top: 0;
+}
+
+.container:hover #menu::after {
+    transform: rotate(-45deg);
+    transition: .5s ease-in-out;
+    top: 0;
+}
+
 #menu {
     background-color: #D84282;
     position: relative;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
-    margin: 100px;
+}
+
+.container:hover #menu {
+    background-color: transparent;
+    transition: .5s ease-in-out;
 }
 
 #menu::before,
@@ -30,4 +51,3 @@
     left: 0;
     top: 20px;
 }
-
